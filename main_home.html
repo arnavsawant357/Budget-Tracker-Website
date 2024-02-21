@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+
+    body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+    }
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
+
+    /* Style the header */
+    .header {
+      font-size: 40px;
+      font-family: Helvetica;
+      text-align: center;
+      color: white;
+
+    }
+   
+
+    /* Style the main content */
+    .main {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px;
+    }
+
+    /* Style the content sections */
+    .section {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #333;
+      font-family: Helvetica;
+      text-align: center;
+      background-color: white;
+    }
+
+    .section {
+      transition: 0.3s; /* Smooth transition */
+    }
+
+    .section:hover {
+      transform: scale(1.1); /* Enlarge the div by 10% on hover */
+    }
+
+    /* Style the icons */
+    .icon {
+      width: 100px;
+      height: 100px;
+      margin: 10px auto;
+    }
+
+    /* Style the titles */
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Style the descriptions */
+    .description {
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* Style the links */
+    .link {
+      font-size: 18px;
+      color: blue;
+      text-decoration: none;
+    }
+
+    /* Style the links on hover */
+    .link:hover {
+      text-decoration: underline;
+    }
+    .button {
+      background-color: #9400FF; /* Button color */
+      border: 2px solid #e7e7e7; /* Button border color */
+      color: black; /* Text color */
+      padding: 10px 20px; /* Button size */
+      text-align: center; /* Text alignment */
+      text-decoration: none; /* No underline */
+      display: inline-block; /* Inline element */
+      font-size: 16px; /* Text size */
+      cursor: pointer; /* Pointer cursor on hover */
+      transition: 0.3s; /* Smooth transition */
+    }
+
+    .button:hover {
+      background-color: #e7e7e7; /* Change background color on hover */
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Create the header -->
+  <div class="header">
+    <h1>Your Budget Calculator</h1>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <!-- Create the main content -->
+  <div class="main">
+    <!-- Create the first section -->
+    <div class="section">
+        <!-- Add the icon -->
+        <img src="housing bill.jfif" alt="Shooting Stars" class="icon">
+        <!-- Add the title -->
+        <h2 class="title">House Bills</h2>
+        $<span id="totalAmount">0</span>
+        <!-- Add the description -->
+        <p class="description">These include all the bills which you pay to keep your house running</p>
+        <!-- Add the link -->
+        <a href="housebill_calc.html" class="button">Click Me</a>
+      </div>
+
+    <div class="section">
+      <!-- Add the icon -->
+      <img src="healthcare.png" alt="Shooting Stars" class="icon">
+      <!-- Add the title -->
+      <h2 class="title">Health Care</h2>
+      $<span id="totalAmount1">0</span>
+      <!-- Add the description -->
+      <p class="description">These includes all the medical expenditures including check-ups, medicines etc.</p>
+      <!-- Add the link -->
+      <a href="healthcare_calc.html" class="button">Click Me</a>
+    </div>
+
+    <!-- Create the second section -->
+    <div class="section">
+      <!-- Add the icon -->
+      <img src="investments logo.png" alt="The Catalyzer" class="icon">
+      <!-- Add the title -->
+      <h2 class="title">Investments</h2>
+      $<span id="totalAmount2">0</span>
+      <!-- Add the description -->
+      <p class="description">This will include all your investments in markets.</p>
+      <!-- Add the link -->
+      <a href="investment_calc.html" class="button">Click Me</a>
+    </div>
+
+    <!-- Create the third section -->
+    <div class="section">
+      <!-- Add the icon -->
+      <img src="recreational expenditures.png" alt="Neptune" class="icon">
+      <!-- Add the title -->
+      <h2 class="title">Recreational Expenditure</h2>
+      $<span id="totalAmount3">0</span>
+      <!-- Add the description -->
+      <p class="description">This wil inlcude all the expenses including lunch, dinner, trips etc.</p>     
+      <!-- Add the link -->
+      <a href="recexpenditure.html" class="button">Click Me</a>
+      <script>
+        // Retrieve and update totalAmount for House Bills
+        const totalAmount = localStorage.getItem('totalAmount');
+        document.getElementById('totalAmount').textContent = totalAmount;
+      
+        const totalAmount1 = localStorage.getItem('totalAmount1');
+        document.getElementById('totalAmount1').textContent = totalAmount1;
+
+        const totalAmount2 = localStorage.getItem('totalAmount2');
+        document.getElementById('totalAmount2').textContent = totalAmount2;
+
+        const totalAmount3 = localStorage.getItem('totalAmount3');
+        document.getElementById('totalAmount3').textContent = totalAmount3;
+
+      </script>
+    </div>
+  </div>
+</body>
+</html>

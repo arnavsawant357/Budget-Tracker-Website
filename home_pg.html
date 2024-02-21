@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Approval System</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header styles */
+        .header {
+            text-align: center;
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+
+        /* Navigation bar styles */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-list li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: #FFF;
+            font-weight: bold;
+        }
+
+        .nav-list a:hover {
+            color: #FF851B;
+        }
+
+        /* Form styles (unchanged) */
+        /* ... */
+
+        /* Bill list styles (unchanged) */
+        /* ... */
+
+        /* Homepage styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F8F8F8;
+        }
+
+        .intro {     /*welcome to our budget system*/
+            text-align: center;
+            padding: 40px;
+        }
+
+
+
+
+        /* Budget management tips */
+        .budget-tips {
+            background-color: #FFF;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .budget-tips h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .budget-tips p {
+            font-size: 16px;
+            color: #333;
+        }body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Budget Approval System</h1>
+    </div>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="intro">
+        <h1>Welcome to Our Budget System</h1>
+        <p>Submit your bills, manage expenses, and streamline approvals.</p>
+    </div>
+    <div class="budget-tips">
+        <h2>How to Manage Your Budget:</h2>
+        <p>1. **Track Expenses**: Keep a record of all expenses, no matter how small. Use our system to submit bills promptly.</p>
+        <p>2. **Set Budget Goals**: Define spending limits for different categories (e.g., travel, supplies).</p>
+        <p>3. **Prioritize**: Allocate funds to essential needs first (e.g., utilities, salaries).</p>
+        <p>4. **Review Regularly**: Check your budget periodically to ensure you're on track.</p>
+        <p>5. **Collaborate**: Managers, review submitted bills promptly and approve or reject as needed.</p>
+    </div>
+    <!-- Rest of the form and bill list remain unchanged -->
+    <!-- ... -->
+</body>
+</html>
